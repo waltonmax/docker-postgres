@@ -3,7 +3,12 @@
   ```bash
   docker pull waltonmax/postgresql:latest
   
-  docker run -d --name postgresql --network host -e POSTGRES_PASSWORD=postgres waltonmax/postgresql:latest
+  docker run -d \
+      --name=postgresql \
+      --net=host \
+      -e POSTGRES_PASSWORD=postgres \
+      -v /data/postgresql/data:/var/lib/postgresql \
+      waltonmax/postgresql:latest
   
   #docker-compose
   docker-compose up -d
