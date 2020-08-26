@@ -1,6 +1,8 @@
 ## 运行
 
   ```bash
+  dock build -t waltonmax/postgresql:latest .
+  
   docker pull waltonmax/postgresql:latest
   
   docker run -d \
